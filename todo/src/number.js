@@ -1,4 +1,4 @@
 const count = 1000000;
-const lenght = 2;
+const lenght = 3;
 
 export {count, lenght};
