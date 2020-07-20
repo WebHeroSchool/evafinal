@@ -9,6 +9,6 @@ const InputItem = () => (<div>
         defaultValue="Добавить дело"
         variant="outlined"
     />
-  </div>)
+  </div>);
 
 export default InputItem;
