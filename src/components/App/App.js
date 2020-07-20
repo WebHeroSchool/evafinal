@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Footer from '../Footer/Footer';
 import ItemList from '../ItemList/ItemList';
+import InputItem from '../InputItem/InputItem';
 import styles from './App.module.css';
 
 const todoItem = 'Закончить React';
