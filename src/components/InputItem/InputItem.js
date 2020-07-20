@@ -3,12 +3,12 @@ import TextField from '@material-ui/core/TextField';
 
 const InputItem = () => (<div>
     <TextField
-          required
-          id="outlined-required"
-          label="Required"
-          defaultValue="Hello World"
-          variant="outlined"
-        />
+        disabled
+        id="outlined-disabled"
+        label="Поле для ввода"
+        defaultValue="Добавить дело"
+        variant="outlined"
+    />
   </div>)
 
 export default InputItem;
