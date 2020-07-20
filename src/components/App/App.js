@@ -5,7 +5,7 @@ import ItemList from '../ItemList/ItemList';
 
 const todoItem = 'Закончить React';
 
-const App = () => 
+const App = () => {
   const items = [
     {
       value: 'Закончить React'
@@ -24,5 +24,6 @@ const App = () =>
     <ItemList items={items}/>
     <Footer count={3}/>
   </div>);
+}
 
 export default App;
