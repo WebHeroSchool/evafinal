@@ -9,13 +9,16 @@ const todoItem = 'Закончить React';
 const App = () => {
   const items = [
     {
-      value: 'Закончить React'
+      value: 'Закончить React',
+      isDone: true
     },
     {
-      value: 'Закончить портфолио'
+      value: 'Закончить портфолио',
+      isDone: false
     },
     {
-      value: 'Найти работу'
+      value: 'Найти работу',
+      isDone: true
     }
   ];
 
