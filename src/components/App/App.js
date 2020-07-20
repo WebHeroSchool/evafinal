@@ -24,6 +24,6 @@ const App = () => {
     <ItemList items={items}/>
     <Footer count={3}/>
   </div>);
-}
+};
 
 export default App;
