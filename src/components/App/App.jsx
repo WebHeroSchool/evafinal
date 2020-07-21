@@ -19,7 +19,7 @@ const App = () => {
     },
     {
       value: 'Найти работу',
-      isDone: true
+      isDone: false
     }
   ];
 
