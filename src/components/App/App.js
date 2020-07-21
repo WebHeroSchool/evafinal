@@ -19,7 +19,7 @@ const App = () => {
     },
     {
       value: 'Найти работу',
-      isDone: true
+      isDone: false
     }
   ];
 
@@ -28,7 +28,7 @@ const App = () => {
     <h1 className = {styles.title}>Важные дела:</h1>
     <InputItem/>
     <ItemList items={items}/>
-    <Footer count={3}/>
+    <Footer count={2}/>
   </div>);
 };
 
