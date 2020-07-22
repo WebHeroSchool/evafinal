@@ -7,8 +7,9 @@ import styles from './App.module.css';
 
 const todoItem = 'Закончить React';
 
-const App = () => {
-  const items = [
+class App extends React.Component {
+  render() {
+    const items = [
     {
       value: 'Закончить React',
       isDone: true
@@ -30,6 +31,7 @@ const App = () => {
     <ItemList items={items}/>
     <Footer count={2}/>
   </div>);
+  }
 };
 
 export default App;
