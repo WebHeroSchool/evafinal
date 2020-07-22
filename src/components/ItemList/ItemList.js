@@ -8,7 +8,9 @@ const ItemList =({items}) => (<ul>
   {items.map(item =>
     <li className ={styles.list} key={item.value}>
     <div className = {styles.check}>
-    <Checkbox />
+    <Checkbox 
+        checked={isDone};
+        />
     </div>
     <Item
         value={item.value}
