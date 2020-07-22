@@ -9,7 +9,7 @@ const todoItem = 'Закончить React';
 
 class App extends React.Component {
   state = {
-    const items = [
+    items: [
       {
         value: 'Закончить React',
         isDone: true
@@ -22,16 +22,18 @@ class App extends React.Component {
         value: 'Найти работу',
         isDone: false
       }
-    ];
+    ]
   };
 
-  return (
-  <div className = {styles.wrap}>
-    <h1 className = {styles.title}>Важные дела:</h1>
-    <InputItem/>
-    <ItemList items={this.state.items}/>
-    <Footer count={2}/>
-  </div>);
+  render() {
+    return (
+      <div className = {styles.wrap}>
+        <h1 className = {styles.title}>Важные дела:</h1>
+        <InputItem/>
+        <ItemList items={this.state.items}/>
+        <Footer count={2}/>
+      </div>);
+  }
 };
 
 export default App;
