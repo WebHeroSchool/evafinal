@@ -9,7 +9,7 @@ const ItemList =({items, isDone, onClickDone}) => (<ul>
     <li className ={styles.list} key={item.value}>
     <div className = {styles.check}>
     <Checkbox
-      onClick={() => onClickDone(isDone)}
+      onClick={() => onClickDone(item.isDone)}
       />
         </div>
         <Item
