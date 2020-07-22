@@ -8,30 +8,30 @@ import styles from './App.module.css';
 const todoItem = 'Закончить React';
 
 class App extends React.Component {
-  render() {
+  state = {
     const items = [
-    {
-      value: 'Закончить React',
-      isDone: true
-    },
-    {
-      value: 'Закончить портфолио',
-      isDone: false
-    },
-    {
-      value: 'Найти работу',
-      isDone: false
-    }
-  ];
+      {
+        value: 'Закончить React',
+        isDone: true
+      },
+      {
+        value: 'Закончить портфолио',
+        isDone: false
+      },
+      {
+        value: 'Найти работу',
+        isDone: false
+      }
+    ];
+  };
 
   return (
   <div className = {styles.wrap}>
     <h1 className = {styles.title}>Важные дела:</h1>
     <InputItem/>
-    <ItemList items={items}/>
+    <ItemList items={this.state.items}/>
     <Footer count={2}/>
   </div>);
-  }
 };
 
 export default App;
