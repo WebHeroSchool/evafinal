@@ -9,12 +9,15 @@ const ItemList =({items, isDone, onClickDone}) => (<ul>
     <li className ={styles.list} key={item.value}>
     <div className = {styles.check}>
     <Checkbox
-      onClick={() => onClickDone(item.isDone)}
+      checked={item.isDone}
+      tabIndex={-1}
+      onClick={() => onClickDone(item.id)}
       />
         </div>
         <Item
             value={item.value}
             isDone={item.isDone}
+            id = {item.id}
             />
         <div className ={styles.delete}>
     <DeleteTwoToneIcon />
