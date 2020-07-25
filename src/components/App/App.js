@@ -32,11 +32,21 @@ onClickDone = id => {
     if (item.id ===id){
       newItem.isDone = !item.isDone;
     }
-
     return newItem;
   });
 
   this.setState({ items: newItemList });
+};
+
+onClickDelete = id => {
+  const newList = this.state.items.map(item => {
+    const newItem { ...item};
+    if (item.id === id){
+      delete newItem.isDone;
+    }
+    return newItem;
+  });
+  this.setState({ items: newList});
 };
 
   render() {
@@ -44,7 +54,7 @@ onClickDone = id => {
       <div className = {styles.wrap}>
         <h1 className = {styles.title}>Важные дела:</h1>
         <InputItem/>
-        <ItemList items={this.state.items} onClickDone={this.onClickDone} />
+        <ItemList items={this.state.items} onClickDone={this.onClickDone} onClickDelete={this.onClickDelete}/>
         <Footer count={2}/>
       </div>);
   }
