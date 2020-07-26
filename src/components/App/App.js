@@ -44,7 +44,7 @@ onClickDelete = id => {
   this.setState({ items: newList});
 };
 
-onClickAdd = () = this.setState(state =>({
+onClickAdd = value => this.setState(state =>({
   items: [
     ...state.items,
     {
@@ -66,7 +66,7 @@ onClickAdd = () = this.setState(state =>({
           onClickDone={this.onClickDone}
           onClickDelete={this.onClickDelete}
         />
-        <Footer count={2}/>
+        <Footer count={this.state.count}/>
       </div>);
   }
 };

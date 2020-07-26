@@ -6,7 +6,7 @@ import DeleteTwoToneIcon from '@material-ui/icons/DeleteTwoTone';
 
 const ItemList =({items, isDone, onClickDone, onClickDelete}) => (<ul>
   {items.map(item =>
-    <li className ={styles.list} key={item.value}>
+    <li className ={styles.list} key={item.id}>
     <div className = {styles.check}>
     <Checkbox
       checked={item.isDone}
