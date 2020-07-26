@@ -39,13 +39,7 @@ onClickDone = id => {
 };
 
 onClickDelete = id => {
-  const newList = this.state.items.map(item => {
-    const newItem { ...item};
-    if (item.id === id){
-      delete newItem.isDone;
-    }
-    return newItem;
-  });
+  const newList = this.state.items.filter(item => item.id != id);
   this.setState({ items: newList});
 };
 
