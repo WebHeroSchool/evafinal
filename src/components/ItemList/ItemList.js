@@ -4,7 +4,7 @@ import styles from './ItemList.module.css';
 import Checkbox from '@material-ui/core/Checkbox';
 import DeleteTwoToneIcon from '@material-ui/icons/DeleteTwoTone';
 
-const ItemList =({items, isDone, onClickDone}) => (<ul>
+const ItemList =({items, isDone, onClickDone, onClickDelete}) => (<ul>
   {items.map(item =>
     <li className ={styles.list} key={item.value}>
     <div className = {styles.check}>
@@ -20,7 +20,9 @@ const ItemList =({items, isDone, onClickDone}) => (<ul>
             id = {item.id}
             />
         <div className ={styles.delete}>
-    <DeleteTwoToneIcon />
+    <DeleteTwoToneIcon 
+        onClick={() => onClickDelete(item.id)}
+    />
     </div>
     </li>)}
 </ul>);
