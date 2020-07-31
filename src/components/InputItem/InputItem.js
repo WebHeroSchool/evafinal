@@ -24,7 +24,7 @@ class InputItem extends React.Component {
     };
 
     changeUppercase = event => {
-        this.setState({ inputValue: event.target.value.toUpperCase()})
+        this.setState({ inputValue: event.target.value.toUpperCase()});
     };
 
     render () {
@@ -62,7 +62,7 @@ class InputItem extends React.Component {
             Добавить
             </Button>
           </div>);
-    };
+    }
 }
 
 
