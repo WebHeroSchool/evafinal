@@ -44,7 +44,7 @@ onClickDelete = id => {
   this.setState({ items: newList});
 };
 
-onClickAdd = value => this.setState(state =>({
+onClickAdd = value => this.setState(state => ({
   items: [
     ...state.items,
     {
