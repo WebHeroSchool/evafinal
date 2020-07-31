@@ -17,6 +17,7 @@ class InputItem extends React.Component {
                 error:false
             });
             this.props.onClickAdd(this.state.inputValue);
+            this.setState({inputValue:''});
         } else {
             this.setState({error:true});
         }
@@ -56,7 +57,7 @@ class InputItem extends React.Component {
                 variant="contained"
                 color="secondary"
                 fullWidth
-                onClick={() => onClickAdd(this.state.inputValue)}
+                onClick={() => this.onButtonClick()}
             >
             Добавить
             </Button>
