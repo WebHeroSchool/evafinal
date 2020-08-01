@@ -7,22 +7,23 @@ import classnames from 'classnames';
 class InputItem extends React.Component {
     state = {
         inputValue: '',
-        error: false
+        errorMsg: '',
+        isError: false
     };
 
     onButtonClick = () => {
         if (this.state.inputValue !== '') {
             this.setState({
                 inputValue: '',
-                error:false
+                errorMsg: '',
+                isError:false,
             });
             this.props.onClickAdd(this.state.inputValue);
-            this.setState({inputValue:''});
         } else {
-            this.setState(state => ({
-            placeholder:'Incorrect entry',
-            error: true,
-          }));
+            this.setState({
+            errorMsg:'Ошибка. Введите дело',
+            isError: true,
+          });
         }
     };
 
@@ -31,23 +32,14 @@ class InputItem extends React.Component {
     };
 
     render () {
-        const {onClickAdd} = this.props;
-
         return (
-            <div 
-                сlassName = {
-                    classnames({
-                        [styles.input]: true,
-                        [styles.error]: this.state.error,
-                    })
-                }
-            >
+            <div>
             <TextField
                 error = {this.state.error}
                 id="outlined-full-width"
                 style={{ margin: 8 }}
                 placeholder="Добавить дело"
-                helperText="Just do it!"
+                helperText={this.state.errorMsg}
                 fullWidth
                 margin="normal"
                 InputLabelProps={{
