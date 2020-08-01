@@ -19,7 +19,10 @@ class InputItem extends React.Component {
             this.props.onClickAdd(this.state.inputValue);
             this.setState({inputValue:''});
         } else {
-            this.setState({error:true});
+            this.setState(state => ({
+            placeholder:'Incorrect entry',
+            error: true,
+          }));
         }
     };
 
@@ -40,6 +43,7 @@ class InputItem extends React.Component {
                 }
             >
             <TextField
+                error = {this.state.error}
                 id="outlined-full-width"
                 style={{ margin: 8 }}
                 placeholder="Добавить дело"
