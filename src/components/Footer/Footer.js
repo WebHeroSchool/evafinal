@@ -8,6 +8,6 @@ const Footer =({ count }) => (
 
 Footer.defaultProps={
   count: 0
-}
+};
 
 export default Footer;

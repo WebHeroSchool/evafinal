@@ -29,7 +29,7 @@ const ItemList =({items, isDone, onClickDone, onClickDelete}) => (<ul>
 
 ItemList.defaultProps={
   items: {
-    value: 'Важные дела отсутствуют'
+    value: "Важные дела отсутствуют"
   }
 };
 
