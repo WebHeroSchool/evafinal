@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Item from '../Item/Item';
 import styles from './ItemList.module.css';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -27,10 +28,11 @@ const ItemList =({items, isDone, onClickDone, onClickDelete}) => (<ul>
     </li>)}
 </ul>);
 
-ItemList.defaultProps={
-  items: {
-    value: "Важные дела отсутствуют"
-  }
+ItemList.propTypes = {
+  items: PropTypes.array.isRequired,
+  isDone: PropTypes.bool,
+  onClickDone: PropTypes.func,
+  onClickDelete: PropTypes.func
 };
 
 export default ItemList;
