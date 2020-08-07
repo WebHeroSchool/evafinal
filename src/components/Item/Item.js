@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './Item.module.css';
 
-const Item = ({value, isDone}) => (
-  <span 
+
+class Item extends React.Component {
+  render() {
+    const {value, isDone} = this.props;
+    return (<span 
   className={
   classnames({
     [styles.item]: true,
@@ -13,10 +16,7 @@ const Item = ({value, isDone}) => (
 }>
   {value}
   </span>);
-
-Item.propTypes={
-    value: PropTypes.string,
-    isDone: PropTypes.bool
+  }
 };
 
 export default Item;
