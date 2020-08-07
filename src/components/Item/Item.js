@@ -6,7 +6,7 @@ import styles from './Item.module.css';
 
 class Item extends React.Component {
   componentDidMount() {
-    setInterval( () => console.log('mounting'), 1000);
+    this.timerId = setInterval( () => console.log('mounting'), 1000);
   }
 
   componentDidUpdate() {
@@ -14,7 +14,7 @@ class Item extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log('unmounting');
+    clearInterval(this.timerId);
   }
 
   render() {
