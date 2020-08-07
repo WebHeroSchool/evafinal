@@ -31,6 +31,10 @@ class InputItem extends React.Component {
         this.setState({ inputValue: event.target.value.toUpperCase()});
     };
 
+    componentDidUpdate() {
+        console.log('componentDidUpdate');
+    }
+
     render () {
         return (
             <div>
