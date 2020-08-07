@@ -6,15 +6,15 @@ import styles from './Item.module.css';
 
 class Item extends React.Component {
   componentDidMount() {
-    this.timerId = setInterval( () => console.log('mounting'), 1000);
+    console.log('componentDidMount');
   }
 
   componentDidUpdate() {
-    console.log('update');
+    console.log('componentDidUpdate');
   }
 
   componentWillUnmount() {
-    clearInterval(this.timerId);
+    console.log('componentWillUnmount');
   }
 
   render() {
@@ -29,6 +29,6 @@ class Item extends React.Component {
     {value}
     </span>);
   }
-};
+}
 
 export default Item;
