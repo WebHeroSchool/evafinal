@@ -6,15 +6,15 @@ import styles from './Item.module.css';
 
 class Item extends React.Component {
   componentDidMount() {
-    console.log('componentDidMount');
+    setInterval( () => console.log('mounting'), 1000);
   }
 
   componentDidUpdate() {
-    console.log('componentDidUpdate');
+    console.log('update');
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount');
+    console.log('unmounting');
   }
 
   render() {
