@@ -29,6 +29,6 @@ class Item extends React.Component {
     {value}
     </span>);
   }
-};
+}
 
 export default Item;
