@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import Footer from '../Footer/Footer';
 import ItemList from '../ItemList/ItemList';
@@ -24,8 +24,15 @@ function App() {
       }
   ]);
   const [count, setCount] = useState(count: 3)
-}
-/*count: 3*/
+};
+
+useEffect(() => {
+  console.log('update');
+});
+
+useEffect(() => {
+  console.log('mount');
+}, []);
 
 const onClickDone = id => {
   const newItemList = items.map(item => {
