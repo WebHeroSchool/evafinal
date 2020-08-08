@@ -68,7 +68,7 @@ function Todo() {
     setCount(count => count +1);
   };
 
-  return (<div>
+  return (<div className={styles.wrap}>
       <h1 className = {styles.title}>Важные дела:</h1>
       <InputItem onClickAdd={onClickAdd}/>
       <ItemList

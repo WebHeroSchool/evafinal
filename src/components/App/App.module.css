@@ -1,8 +1,24 @@
 .wrap {
-  margin: auto;
-  width: 300px;
-  border: 1px solid #6e6e6e;
-  border-radius: 10%;
+  margin: 0 auto;
+  width: 50%;
+  height: 500px;
+  border: 1px solid #1a1a1a;
   box-shadow: 1px 1px 5px;
-  padding: 20px 60px;
+  display: grid;
+  grid-template-areas: 'sidebar ... content content';
+  font-family: 'Roboto Mono', monospace;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+  margin-top: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #1a1a1a;
 }
