@@ -6,3 +6,8 @@
   box-shadow: 1px 1px 5px;
   padding: 20px 60px;
 }
+
+.title {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+}
