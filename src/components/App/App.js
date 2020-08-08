@@ -6,7 +6,8 @@ import InputItem from '../InputItem/InputItem';
 import styles from './App.module.css';
 
 function App() {
-  const [items, setItems] = useState([
+  const initialState = {
+    items: [
       {
         value: 'Закончить React',
         isDone: true,
@@ -22,48 +23,50 @@ function App() {
         isDone: false,
         id: 3
       }
-  ]);
-  const [count, setCount] = useState(count: 3)
-};
+    ],
+    count: 3
+  };
+  const [items, setItems] = useState(initialState.items);
+  const [count, setCount] = useState(initialState.count);
 
-useEffect(() => {
-  console.log('update');
-});
-
-useEffect(() => {
-  console.log('mount');
-}, []);
-
-const onClickDone = id => {
-  const newItemList = items.map(item => {
-    const newItem = { ...item};
-    if (item.id ===id){
-      newItem.isDone = !item.isDone;
-    }
-    return newItem;
+  useEffect(() => {
+    console.log('update');
   });
 
-  this.setState({ items: newItemList });
-};
+  useEffect(() => {
+    console.log('mount');
+  }, []);
 
-const onClickDelete = id => {
-  const newList = items.filter(item => item.id !== id);
-  setItems(newList);
-  setCount(count => count -1)
-};
+  const onClickDone = id => {
+    const newItemList = items.map(item => {
+      const newItem = { ...item};
+      if (item.id ===id){
+        newItem.isDone = !item.isDone;
+      }
+      return newItem;
+    });
 
-const onClickAdd = value => {
-  const newItems = [
-    ...items,
-    {
-      value,
-      isDone: false,
-      id: count + 1
-    }
-  ],
-  setItems(newItems);
-  setCount(count => count +1)
-};
+    setItems(newItemList);
+  };
+
+  const onClickDelete = id => {
+    const newList = items.filter(item => item.id !== id);
+    setItems(newList);
+    setCount(count => count -1);
+  };
+
+  const onClickAdd = value => {
+    const newItems = [
+      ...items,
+      {
+        value,
+        isDone: false,
+        id: count + 1
+      }
+    ];
+    setItems(newItems);
+    setCount(count => count +1)
+  };
 
   return (
     <div className = {styles.wrap}>
@@ -76,5 +79,6 @@ const onClickAdd = value => {
       />
       <Footer count={count}/>
     </div>);
+};
 
 export default App;
